@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.overlay{
+    display: grid;
+    place-items: center;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.display-one{
+    text-align: center;
+    border: 2px solid rgb(227, 38, 54);
+    border-radius: 20px;
+    padding: 10px;
+    width: 500px;
+}
+
+.jackpot-info{
+    font-family: 'Koulen', cursive;
+    font-size: 30px;
+}
+
+.display-two{
+    display: grid;
+    place-items: center;
+
+    border: 2px solid rgb(227, 38, 54);
+    border-radius: 20px;
+    width: 500px;
+    padding: 10px;
+}
+
+.inline-one{
+    display: inline-flex;
+}
+
+.space{
+    padding: 10px;
+}
+
+.win-1,
+.win-2,
+.win-3{
+    text-align: center;
+    padding: 20px;
+    border: 2px solid rgb(227, 38, 54);
+    border-radius: 20px;
+    width: 100px;
+}
+
+.win,
+.number-7,
+.number-2-6,
+.number-8-12{
+    font-family: 'Koulen', cursive;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.radio-2-6,
+.radio-7,
+.radio-8-12{
+    width: 30px;
+    height: 30px;
+}
+
+.display-three{
+    display: grid;
+    place-items: center;
+
+    border: 2px solid rgb(227, 38, 54);
+    border-radius: 20px;
+    width: 500px;
+    padding: 10px;
+}
+
+.inline-two{
+    display: inline-flex;
+}
+
+.dice-one,
+.dice-two{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(175, 175, 175);
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+label{
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.input-number{
+    width: 200px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.input-number:focus{
+    outline: none;
+}
+
+.roll-dice{
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 800;
+    border: none;
+    background-color: rgb(227, 38, 54);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.display-four{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.more-money{
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
+.input-request{
+    width: 200px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.input-request:focus{
+    outline: none;
+}
+
+.request-diamond{
+    border:none;
+    padding: 10px;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    background-color: rgb(25, 25, 25);
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.balance{
+    font-family: 'Koulen', cursive;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+.diamond{
+    font-family: 'Koulen', cursive;
+}
