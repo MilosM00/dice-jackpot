@@ -13,9 +13,16 @@
     padding-bottom: 50px;
 }
 
+.box{
+    background: linear-gradient(to right, #0096FF, #6495ED);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.7);
+}
+
 .display-one{
     text-align: center;
-    border: 2px solid rgb(227, 38, 54);
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 20px;
     padding: 10px;
     width: 500px;
@@ -24,13 +31,14 @@
 .jackpot-info{
     font-family: 'Koulen', cursive;
     font-size: 30px;
+    color: rgb(255, 255, 255);
 }
 
 .display-two{
     display: grid;
     place-items: center;
 
-    border: 2px solid rgb(227, 38, 54);
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 20px;
     width: 500px;
     padding: 10px;
@@ -49,7 +57,8 @@
 .win-3{
     text-align: center;
     padding: 20px;
-    border: 2px solid rgb(227, 38, 54);
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     border-radius: 20px;
     width: 100px;
 }
@@ -75,7 +84,7 @@
     display: grid;
     place-items: center;
 
-    border: 2px solid rgb(227, 38, 54);
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 20px;
     width: 500px;
     padding: 10px;
@@ -89,22 +98,33 @@
 .dice-two{
     width: 50px;
     height: 50px;
-    background-color: rgb(175, 175, 175);
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
     font-size: 45px;
     border-radius: 5px;
     text-align: center;
 }
 
+.center{
+    display: grid;
+    place-items: center;
+}
+
 label{
     padding-bottom: 10px;
     font-size: 18px;
+    color: rgb(255, 255, 255);
 }
 
 .input-number{
     width: 200px;
     padding: 10px;
     font-size: 18px;
+    background-color: transparent;
+    border: none;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 .input-number:focus{
@@ -116,7 +136,8 @@ label{
     font-size: 18px;
     font-weight: 800;
     border: none;
-    background-color: rgb(227, 38, 54);
+    border: 2px solid rgb(255, 255, 255);
+    background-color: transparent;
     color: rgb(255, 255, 255);
     border-radius: 20px;
     cursor: pointer;
