@@ -41,24 +41,131 @@ buttonRequestDiamonds.addEventListener(`click`, () =>{
 });
 
 buttonRollDice.addEventListener(`click`, () =>{
-    setTimeout(() => {
-        
-        diceOne.textContent = Math.trunc(Math.random() * 6) + 1;
-        diceTwo.textContent = Math.trunc(Math.random() * 6) + 1;
 
-        x = Number(diceOne.textContent) + Number(diceTwo.textContent);
-        
-        if(x >= 2 && x <= 6){
+    if(radioOne.checked === true || radioTwo.checked === true || radioThree.checked === true){
+        setTimeout(() => {
             
-        }
+            diceOne.textContent = Math.trunc(Math.random() * 6) + 1;
+            diceTwo.textContent = Math.trunc(Math.random() * 6) + 1;
 
-        if(x === 7){
+            x = Number(diceOne.textContent) + Number(diceTwo.textContent);
+            
+            if(radioOne.checked === true){
+                radioOneTrue();
+            }
 
-        }
+            if(radioTwo.checked === true){
+                radioTwoTrue();
+            }
 
-        if(x >= 8 && x <= 12){
+            if(radioThree.checked === true){
+                radioThreeTrue();
+            }
 
-        }
+        }, 1000);
+    }
 
-    }, 1000);
+    else{
+        alert(`Choose the option to bet!`);
+    }
 });
+
+
+
+
+
+const radioOneTrue = () =>{
+    if(x >= 2 && x <= 6){
+        displayJackpotInfo.style.backgroundColor = `#1CAC78`;
+        jackpotInfo.textContent = `You Win!`;
+
+        setTimeout(() => {
+            displayJackpotInfo.style.backgroundColor = `transparent`;
+            jackpotInfo.textContent = `jackpot`;
+        }, 1500);
+    }
+
+    if(x === 7){
+        displayJackpotInfo.style.backgroundColor = `#E60026`;
+        jackpotInfo.textContent = `Better luck next time!`;
+
+        setTimeout(() => {
+            displayJackpotInfo.style.backgroundColor = `transparent`;
+            jackpotInfo.textContent = `jackpot`;
+        }, 1500);
+    }
+    
+    if(x >= 8 && x <= 12){
+        displayJackpotInfo.style.backgroundColor = `#E60026`;
+        jackpotInfo.textContent = `Better luck next time!`;
+
+        setTimeout(() => {
+            displayJackpotInfo.style.backgroundColor = `transparent`;
+            jackpotInfo.textContent = `jackpot`;
+        }, 1500);
+    }
+};
+
+const radioTwoTrue = () =>{
+    if(x >= 2 && x <= 6){
+        displayJackpotInfo.style.backgroundColor = `#E60026`;
+        jackpotInfo.textContent = `Better luck next time!`;
+
+        setTimeout(() => {
+            displayJackpotInfo.style.backgroundColor = `transparent`;
+            jackpotInfo.textContent = `jackpot`;
+        }, 1500);
+    }
+
+    if(x === 7){
+        displayJackpotInfo.style.backgroundColor = `#1CAC78`;
+        jackpotInfo.textContent = `You Win!`;
+
+        setTimeout(() => {
+            displayJackpotInfo.style.backgroundColor = `transparent`;
+            jackpotInfo.textContent = `jackpot`;
+        }, 1500);
+    }
+    
+    if(x >= 8 && x <= 12){
+        displayJackpotInfo.style.backgroundColor = `#E60026`;
+        jackpotInfo.textContent = `Better luck next time!`;
+
+        setTimeout(() => {
+            displayJackpotInfo.style.backgroundColor = `transparent`;
+            jackpotInfo.textContent = `jackpot`;
+        }, 1500);
+    }
+};
+
+const radioThreeTrue = () =>{
+    if(x >= 2 && x <= 6){
+        displayJackpotInfo.style.backgroundColor = `#E60026`;
+        jackpotInfo.textContent = `Better luck next time!`;
+
+        setTimeout(() => {
+            displayJackpotInfo.style.backgroundColor = `transparent`;
+            jackpotInfo.textContent = `jackpot`;
+        }, 1500);
+    }
+
+    if(x === 7){
+        displayJackpotInfo.style.backgroundColor = `#E60026`;
+        jackpotInfo.textContent = `Better luck next time!`;
+
+        setTimeout(() => {
+            displayJackpotInfo.style.backgroundColor = `transparent`;
+            jackpotInfo.textContent = `jackpot`;
+        }, 1500);
+    }
+    
+    if(x >= 8 && x <= 12){
+        displayJackpotInfo.style.backgroundColor = `#1CAC78`;
+        jackpotInfo.textContent = `You Win!`;
+
+        setTimeout(() => {
+            displayJackpotInfo.style.backgroundColor = `transparent`;
+            jackpotInfo.textContent = `jackpot`;
+        }, 1500);
+    }
+};
