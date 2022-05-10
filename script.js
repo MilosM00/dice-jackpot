@@ -33,40 +33,59 @@ radioThree.addEventListener(`click`, () =>{
 });
 
 buttonRequestDiamonds.addEventListener(`click`, () =>{
-    setTimeout(() => {
-        
+    if(inputRequestDiamonds.value > 0 && inputRequestDiamonds.value < 1000){
+        setTimeout(() => {
+            yourDiamonds.textContent = Number(yourDiamonds.textContent) + Number(inputRequestDiamonds.value);
 
-
-    }, 1000);
+            inputRequestDiamonds.value = ``;
+        }, 1000);
+    }
+    
+    else{
+        alert(`You can request the number of diamonds between 1 and 999!`);
+        inputRequestDiamonds.value = ``;
+        inputRequestDiamonds.focus();
+    }
 });
 
 buttonRollDice.addEventListener(`click`, () =>{
-
     if(radioOne.checked === true || radioTwo.checked === true || radioThree.checked === true){
-        setTimeout(() => {
+        if(inputDiamonds.value > 0 && inputDiamonds.value < 1000){
+            if(Number(yourDiamonds.textContent) < inputDiamonds.value){
+                alert(`You do not have enough diamonds to do that!`);
+            }
             
-            diceOne.textContent = Math.trunc(Math.random() * 6) + 1;
-            diceTwo.textContent = Math.trunc(Math.random() * 6) + 1;
-
-            x = Number(diceOne.textContent) + Number(diceTwo.textContent);
-            
-            if(radioOne.checked === true){
-                radioOneTrue();
+            else{
+                setTimeout(() => {
+                    
+                    diceOne.textContent = Math.trunc(Math.random() * 6) + 1;
+                    diceTwo.textContent = Math.trunc(Math.random() * 6) + 1;
+        
+                    x = Number(diceOne.textContent) + Number(diceTwo.textContent);
+                    
+                    if(radioOne.checked === true){
+                        radioOneTrue();
+                    }
+                    
+                    else if(radioTwo.checked === true){
+                        radioTwoTrue();
+                    }
+                    
+                    else if(radioThree.checked === true){
+                        radioThreeTrue();
+                    }
+                    
+                }, 1000);
             }
+        }
 
-            if(radioTwo.checked === true){
-                radioTwoTrue();
-            }
-
-            if(radioThree.checked === true){
-                radioThreeTrue();
-            }
-
-        }, 1000);
+        else{
+            alert(`You need to choose the number of diamonds between 1 and 999!`);
+        }
     }
 
     else{
-        alert(`Choose the option to bet!`);
+        alert(`You need to choose option to bet!`);
     }
 });
 
@@ -79,6 +98,8 @@ const radioOneTrue = () =>{
         displayJackpotInfo.style.backgroundColor = `#1CAC78`;
         jackpotInfo.textContent = `You Win!`;
 
+        yourDiamonds.textContent = Number(yourDiamonds.textContent) + Number(inputDiamonds.value);
+
         setTimeout(() => {
             displayJackpotInfo.style.backgroundColor = `transparent`;
             jackpotInfo.textContent = `jackpot`;
@@ -86,8 +107,10 @@ const radioOneTrue = () =>{
     }
 
     if(x === 7){
-        displayJackpotInfo.style.backgroundColor = `#E60026`;
+        displayJackpotInfo.style.backgroundColor = `#E52B50`;
         jackpotInfo.textContent = `Better luck next time!`;
+
+        yourDiamonds.textContent = Number(yourDiamonds.textContent) - Number(inputDiamonds.value);
 
         setTimeout(() => {
             displayJackpotInfo.style.backgroundColor = `transparent`;
@@ -96,8 +119,10 @@ const radioOneTrue = () =>{
     }
     
     if(x >= 8 && x <= 12){
-        displayJackpotInfo.style.backgroundColor = `#E60026`;
+        displayJackpotInfo.style.backgroundColor = `#E52B50`;
         jackpotInfo.textContent = `Better luck next time!`;
+
+        yourDiamonds.textContent = Number(yourDiamonds.textContent) - Number(inputDiamonds.value);
 
         setTimeout(() => {
             displayJackpotInfo.style.backgroundColor = `transparent`;
@@ -108,8 +133,10 @@ const radioOneTrue = () =>{
 
 const radioTwoTrue = () =>{
     if(x >= 2 && x <= 6){
-        displayJackpotInfo.style.backgroundColor = `#E60026`;
+        displayJackpotInfo.style.backgroundColor = `#E52B50`;
         jackpotInfo.textContent = `Better luck next time!`;
+
+        yourDiamonds.textContent = Number(yourDiamonds.textContent) - Number(inputDiamonds.value);
 
         setTimeout(() => {
             displayJackpotInfo.style.backgroundColor = `transparent`;
@@ -121,6 +148,8 @@ const radioTwoTrue = () =>{
         displayJackpotInfo.style.backgroundColor = `#1CAC78`;
         jackpotInfo.textContent = `You Win!`;
 
+        yourDiamonds.textContent = Number(yourDiamonds.textContent) + Number(inputDiamonds.value) + Number(inputDiamonds.value);
+
         setTimeout(() => {
             displayJackpotInfo.style.backgroundColor = `transparent`;
             jackpotInfo.textContent = `jackpot`;
@@ -128,8 +157,10 @@ const radioTwoTrue = () =>{
     }
     
     if(x >= 8 && x <= 12){
-        displayJackpotInfo.style.backgroundColor = `#E60026`;
+        displayJackpotInfo.style.backgroundColor = `#E52B50`;
         jackpotInfo.textContent = `Better luck next time!`;
+
+        yourDiamonds.textContent = Number(yourDiamonds.textContent) - Number(inputDiamonds.value);
 
         setTimeout(() => {
             displayJackpotInfo.style.backgroundColor = `transparent`;
@@ -140,8 +171,10 @@ const radioTwoTrue = () =>{
 
 const radioThreeTrue = () =>{
     if(x >= 2 && x <= 6){
-        displayJackpotInfo.style.backgroundColor = `#E60026`;
+        displayJackpotInfo.style.backgroundColor = `#E52B50`;
         jackpotInfo.textContent = `Better luck next time!`;
+
+        yourDiamonds.textContent = Number(yourDiamonds.textContent) - Number(inputDiamonds.value);
 
         setTimeout(() => {
             displayJackpotInfo.style.backgroundColor = `transparent`;
@@ -150,8 +183,10 @@ const radioThreeTrue = () =>{
     }
 
     if(x === 7){
-        displayJackpotInfo.style.backgroundColor = `#E60026`;
+        displayJackpotInfo.style.backgroundColor = `#E52B50`;
         jackpotInfo.textContent = `Better luck next time!`;
+
+        yourDiamonds.textContent = Number(yourDiamonds.textContent) - Number(inputDiamonds.value);
 
         setTimeout(() => {
             displayJackpotInfo.style.backgroundColor = `transparent`;
@@ -162,6 +197,8 @@ const radioThreeTrue = () =>{
     if(x >= 8 && x <= 12){
         displayJackpotInfo.style.backgroundColor = `#1CAC78`;
         jackpotInfo.textContent = `You Win!`;
+
+        yourDiamonds.textContent = Number(yourDiamonds.textContent) + Number(inputDiamonds.value);
 
         setTimeout(() => {
             displayJackpotInfo.style.backgroundColor = `transparent`;
