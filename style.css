@@ -9,8 +9,8 @@
     display: grid;
     place-items: center;
 
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .box{
@@ -99,10 +99,11 @@
 .dice-two{
     width: 50px;
     height: 50px;
+    font-family: 'Fredoka One', cursive;
     background-color: transparent;
     border: 2px solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
-    font-size: 45px;
+    font-size: 37px;
     border-radius: 5px;
     text-align: center;
 }
@@ -183,4 +184,25 @@ label{
 
 .diamond{
     font-family: 'Koulen', cursive;
+}
+
+@media (max-width: 559px) {
+    .display-one,
+    .display-two,
+    .display-three{
+        width: 300px;
+    }
+
+    .win-1,
+    .win-2,
+    .win-3{
+        width: 75px;
+    }
+
+    .radio-2-6,
+    .radio-7,
+    .radio-8-12{
+        width: 25px;
+        height: 25px;
+    }
 }
