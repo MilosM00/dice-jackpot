@@ -81,6 +81,8 @@ buttonRollDice.addEventListener(`click`, () =>{
 
         else{
             alert(`You need to choose the number of diamonds between 1 and 999!`);
+            inputDiamonds.value = ``;
+            inputDiamonds.focus();
         }
     }
 
@@ -102,7 +104,7 @@ const radioOneTrue = () =>{
 
         setTimeout(() => {
             displayJackpotInfo.style.backgroundColor = `transparent`;
-            jackpotInfo.textContent = `jackpot`;
+            jackpotInfo.textContent = `dice jackpot`;
         }, 1500);
     }
 
@@ -114,7 +116,7 @@ const radioOneTrue = () =>{
 
         setTimeout(() => {
             displayJackpotInfo.style.backgroundColor = `transparent`;
-            jackpotInfo.textContent = `jackpot`;
+            jackpotInfo.textContent = `dice jackpot`;
         }, 1500);
     }
     
@@ -126,7 +128,7 @@ const radioOneTrue = () =>{
 
         setTimeout(() => {
             displayJackpotInfo.style.backgroundColor = `transparent`;
-            jackpotInfo.textContent = `jackpot`;
+            jackpotInfo.textContent = `dice jackpot`;
         }, 1500);
     }
 };
@@ -140,7 +142,7 @@ const radioTwoTrue = () =>{
 
         setTimeout(() => {
             displayJackpotInfo.style.backgroundColor = `transparent`;
-            jackpotInfo.textContent = `jackpot`;
+            jackpotInfo.textContent = `dice jackpot`;
         }, 1500);
     }
 
@@ -152,7 +154,7 @@ const radioTwoTrue = () =>{
 
         setTimeout(() => {
             displayJackpotInfo.style.backgroundColor = `transparent`;
-            jackpotInfo.textContent = `jackpot`;
+            jackpotInfo.textContent = `dice jackpot`;
         }, 1500);
     }
     
@@ -164,7 +166,7 @@ const radioTwoTrue = () =>{
 
         setTimeout(() => {
             displayJackpotInfo.style.backgroundColor = `transparent`;
-            jackpotInfo.textContent = `jackpot`;
+            jackpotInfo.textContent = `dice jackpot`;
         }, 1500);
     }
 };
@@ -178,7 +180,7 @@ const radioThreeTrue = () =>{
 
         setTimeout(() => {
             displayJackpotInfo.style.backgroundColor = `transparent`;
-            jackpotInfo.textContent = `jackpot`;
+            jackpotInfo.textContent = `dice jackpot`;
         }, 1500);
     }
 
@@ -190,7 +192,7 @@ const radioThreeTrue = () =>{
 
         setTimeout(() => {
             displayJackpotInfo.style.backgroundColor = `transparent`;
-            jackpotInfo.textContent = `jackpot`;
+            jackpotInfo.textContent = `dice jackpot`;
         }, 1500);
     }
     
@@ -202,7 +204,7 @@ const radioThreeTrue = () =>{
 
         setTimeout(() => {
             displayJackpotInfo.style.backgroundColor = `transparent`;
-            jackpotInfo.textContent = `jackpot`;
+            jackpotInfo.textContent = `dice jackpot`;
         }, 1500);
     }
 };
